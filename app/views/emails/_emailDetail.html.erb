@@ -8,6 +8,6 @@
 			<p class="card-text"><%=@email.body%></p>
 			
    			<hr>
-            <a href="<%=email_path(@email.id)%>" class="btn btn-danger" data-confirm="ëtes-vous sûr ?" data-method="DELETE">Supprimer</a>
-            <a href="<%=email_path(@email.id)%>" class="btn btn-secondary" data-method="UPDATE">Marquer comme non lu</a>
+            <a href="<%=email_path(@email.id)%>" class="btn btn-danger" data-method="DELETE" data-remote>Supprimer</a>
+            <a href="<%=email_path(@email.id)%>" id="boutonLu" class="btn btn-secondary" data-method="PUT" data-remote >Marquer comme non lu</a>
 	   </div>

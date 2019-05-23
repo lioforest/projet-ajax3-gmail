@@ -1,3 +1,5 @@
+require "faker"
+
 class EmailsController < ApplicationController
 
 
@@ -11,7 +13,7 @@ class EmailsController < ApplicationController
   end
   
   def create
-    @email = Email.new(object: Faker::Lorem.sentence, body: Faker::Lorem.paragraph(2, true), read: 'false')
+    @email = Email.new(object: Faker::Lorem.sentence, body: Faker::Lorem.paragraph(100), read: 'false')
 
       if @email.save # essaie de sauvegarder en base @email
             respond_to do |format|

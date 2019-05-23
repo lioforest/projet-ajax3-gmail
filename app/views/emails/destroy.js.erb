@@ -1,2 +1,4 @@
-console.log("email<%=email.id%>") 
-document.getElementById("email<%=email.id%>").style.display = "none"
+
+document.getElementById("email<%=@email.id%>").style.display = "none"
+var section = document.getElementById("detail_mail")
+section.innerHTML = ""

@@ -1,0 +1,13 @@
+<% if !@email.read %>
+	var section2 = document.getElementById("btnEmail<%=@email.id%>")
+	section2.innerHTML = ""
+	section2.insertAdjacentHTML("afterbegin","<i class='fas fa-envelope'></i>")
+    document.getElementById("boutonLu").innerText = "Marquer comme non-lu"
+<% else%>
+	var section2 = document.getElementById("btnEmail<%=@email.id%>")
+	section2.innerHTML = ""
+	section2.insertAdjacentHTML("afterbegin","<i class='fas fa-envelope-open-text'></i>")
+    document.getElementById("boutonLu").innerText = "Marquer comme lu"
+<% end %>
+
+
