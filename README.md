@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Le GmailLyonnais 
 
-* Ruby version
 
-* System dependencies
+Project by Lioforest (un groupe à moi tout seul)
+Merci pour les coups de mains à mon groupe voisin : Cedric Robert, Noel Gagnaire & Anne-Tahina Metz.
 
-* Configuration
 
-* Database creation
+lien en production sur Heroku
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+voici l'adresse web : https://gmaillyon.herokuapp.com/
