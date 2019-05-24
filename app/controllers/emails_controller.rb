@@ -13,21 +13,19 @@ class EmailsController < ApplicationController
   end
   
   def create
-    @email = Email.new(object: Faker::Lorem.sentence, body: Faker::Lorem.paragraph(100), read: 'false')
+    @email = Email.new(object: Faker::Lorem.sentence, body: Faker::Lorem.paragraph(5), read: 'false')
 
       if @email.save # essaie de sauvegarder en base @email
             respond_to do |format|
       			format.html { redirect_to root_path }
       			format.js { }
     		end
-        flash[:notice] = "Votre email a bien été ajouté"
 
       else
             respond_to do |format|
       			format.html { redirect_to root_path }
       			format.js { }
     		end
-        flash[:notice] = "Erreur dans la création, merci de remplir les champs demandés"
       end
   end
 

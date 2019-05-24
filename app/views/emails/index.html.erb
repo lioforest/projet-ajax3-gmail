@@ -58,12 +58,15 @@
       <div class="col-md-4" >
         <h2>Liste des emails </h2>
         <hr>
+      <Listeemail>
+
       <ul id="email_list">  
       <% @emails.each do |email|  %>
            <%= render 'email', email: email %>
       <% end %>
       </ul>
-
+    </Listeemail>
+    
 
 
       </div>
@@ -89,4 +92,24 @@
   <p>&copy; lioforest</p>
 </footer>
 </body>
+<script type="text/javascript">
+
+
+// 1. Find and sotre the element we want to listen to events on.
+// 1. trouvé et enregistré l’élément sur lequel on veut qu’il l’on verifie si il y a un événement dessus
+  var emaillist = document.getElementById('email_list');
+// 2. define the function that will respond to the event
+//  2. definir la fonction qui va répondre à l’événement ci-dessus.
+  var onMouseMove = function(row) {
+
+var section = document.getElementById("detail_mail")
+section.innerHTML = ""
+section.insertAdjacentHTML("afterbegin", "tu y a cru... moi aussi, il reste à mettre le texte de l'email...")
+  };
+// 3. add the event listener for the elements and function
+// 3. on ajoute à l’eventlistener l’événement voulu et la fonction demandée.
+
+emaillist.addEventListener('click', onMouseMove);
+</script>
 </html>
+
